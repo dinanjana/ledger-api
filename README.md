@@ -13,7 +13,7 @@ Set enviornment variables described in .env.example
 https://app.swaggerhub.com/apis/dinanjana6/ledger-api/1.0.0
 
 ### Sample request
-http://{HOST}/ledger?start_date=2000-01-02&end_date=2099-03-18&frequency=WEEKLY&weekly_rent=324&timezone=Asia/Colombo
+http://{HOST}/ledger?start_date=2000-01-02&end_date=2099-03-18&frequency=WEEKLY&weekly_rent=324
 
 ## Commands
 
