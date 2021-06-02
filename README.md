@@ -9,6 +9,12 @@ npm install
 
 Set enviornment variables described in .env.example
 
+## API Documentation
+https://app.swaggerhub.com/apis/dinanjana6/ledger-api/1.0.0
+
+### Sample request
+http://{HOST}/ledger?start_date=2000-01-02&end_date=2099-03-18&frequency=WEEKLY&weekly_rent=324&timezone=Asia/Colombo
+
 ## Commands
 
 Run in development mode
@@ -51,6 +57,9 @@ API will be available on [http://localhost:{PORT}]
 | |test  
 | | |logic - Unit tests for business logic functions  
 | | |integration-test - API integration tests  
+
+## Assumptions
+* Start date and end date are on property time zone
 
 ## Test coverage
 
