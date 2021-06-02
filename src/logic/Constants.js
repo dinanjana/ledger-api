@@ -1,0 +1,9 @@
+const PAYMENT_FREQUENCY = {
+    WEEKLY: 'WEEKLY',
+    FORTNIGHTLY: 'FORTNIGHTLY',
+    MONTHLY: 'MONTHLY',
+};
+
+module.exports = {
+    PAYMENT_FREQUENCY
+}
