@@ -51,3 +51,24 @@ API will be available on [http://localhost:{PORT}]
 | |test
 | | |logic - Unit tests for business logic functions
 | | |integration-test - API integration tests
+
+## Test coverage
+
+------------|---------|----------|---------|---------|-------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------|---------|----------|---------|---------|-------------------
+All files   |   97.44 |       95 |   86.67 |   97.39 |                   
+ app        |   81.25 |        0 |      60 |   81.25 |                   
+  index.js  |   81.25 |        0 |      60 |   81.25 | 23-25             
+ ...lewares |     100 |      100 |     100 |     100 |                   
+  ...are.js |     100 |      100 |     100 |     100 |                   
+ controller |     100 |      100 |     100 |     100 |                   
+  index.js  |     100 |      100 |     100 |     100 |                   
+ logic      |     100 |      100 |     100 |     100 |                   
+  ...nts.js |     100 |      100 |     100 |     100 |                   
+  Rents.js  |     100 |      100 |     100 |     100 |                   
+  Terms.js  |     100 |      100 |     100 |     100 |                   
+ service    |     100 |    97.62 |     100 |     100 |                   
+  ...ice.js |     100 |      100 |     100 |     100 |                   
+  ...ice.js |     100 |    97.44 |     100 |     100 | 66                
+------------|---------|----------|---------|---------|------------------
