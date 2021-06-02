@@ -2,7 +2,7 @@ const { isAfter, isBefore } = require('date-fns');
 const { PAYMENT_FREQUENCY } = require('../logic/Constants');
 const ValidationService = {
     getLedger: (req, res, next) => {
-        const { start_date, end_date, frequency, weekly_rent, timezone } = req.query;
+        const { start_date, end_date, frequency, weekly_rent } = req.query;
 
         const minDate = new Date("2000-01-01");
         const maxDate = new Date("2099-12-31");
@@ -60,17 +60,17 @@ const ValidationService = {
             }
         }
 
-        if(!timezone) {
-            errors.push('timezone not present')
-        } else {
-            if (Intl && Intl.DateTimeFormat().resolvedOptions().timeZone) {
-                try {
-                    Intl.DateTimeFormat(undefined, {timeZone: timezone});
-                } catch (e) {
-                    errors.push('timezone is not valid');
-                }
-            }
-        }
+        // if(!timezone) {
+        //     errors.push('timezone not present')
+        // } else {
+        //     if (Intl && Intl.DateTimeFormat().resolvedOptions().timeZone) {
+        //         try {
+        //             Intl.DateTimeFormat(undefined, {timeZone: timezone});
+        //         } catch (e) {
+        //             errors.push('timezone is not valid');
+        //         }
+        //     }
+        // }
         if (errors.length) {
             res.status(400);
             throw new Error(errors);
