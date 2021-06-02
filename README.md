@@ -42,15 +42,15 @@ npm run eslint
 API will be available on [http://localhost:{PORT}]
 
 ## Directory structure
-| root
-| |src - src of the app
-| | |app - application definition
-| | |controller - URL path to service map
-| | |logic - Business logic
-| | |service - Services that manipulates entities
-| |test
-| | |logic - Unit tests for business logic functions
-| | |integration-test - API integration tests
+| root  
+| |src - src of the app  
+| | |app - application definition  
+| | |controller - URL path to service map  
+| | |logic - Business logic  
+| | |service - Services that manipulates entities  
+| |test  
+| | |logic - Unit tests for business logic functions  
+| | |integration-test - API integration tests  
 
 ## Test coverage
 
