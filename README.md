@@ -48,7 +48,7 @@ npm run eslint
 ```
 API will be available on [http://localhost:{PORT}]
 
-## Directory structure
+## Project structure
 | root  
 | |src - src of the app  
 | | |app - application definition  
