@@ -60,7 +60,9 @@ API will be available on [http://localhost:{PORT}]
 | | |integration-test - API integration tests  
 
 ## Assumptions
-* Start date and end date are on property time zone
+* Start date and end date are on property time zone. 
+* Dates should be within the range of 2000-01-01 to 2099-12-31 to prevent stack overflow. 
+* Weekly rent should be a positive number within 0 and 999999999. 
 
 ## Test coverage
 
