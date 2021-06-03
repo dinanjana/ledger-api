@@ -7,7 +7,8 @@ First, install the dependencies:
 npm install
 ```
 
-Set enviornment variables described in .env.example
+*Set enviornment variables described in .env.example*
+Tested for node js version >= 10 
 
 ## API Documentation
 https://app.swaggerhub.com/apis/dinanjana6/ledger-api/1.0.0
