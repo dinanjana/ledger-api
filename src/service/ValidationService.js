@@ -1,25 +1,20 @@
 const { isAfter, isBefore } = require('date-fns');
-const { PAYMENT_FREQUENCY } = require('../logic/Constants');
+const { PAYMENT_FREQUENCY, MIN_DATE, MAX_DATE, MIN_RENT, MAX_RENT, DATE_PATTERN } = require('../logic/Constants');
 const ValidationService = {
     getLedger: (req, res, next) => {
         const { start_date, end_date, frequency, weekly_rent } = req.query;
 
-        const minDate = new Date("2000-01-01");
-        const maxDate = new Date("2099-12-31");
-
         let startDate = null;
         let endDate = null;
-
-        let dateRegex = /^\d{4}[-]\d{2}[-]\d{2}$/
 
         let errors = [];
 
         if(!start_date) {
             errors.push('start_date not present');
         } else {
-            if (start_date.match(dateRegex)) {
+            if (start_date.match(DATE_PATTERN)) {
                 startDate = new Date(start_date);
-                if(isBefore(startDate, minDate) || isAfter(startDate, maxDate)) {
+                if(isBefore(startDate, MIN_DATE) || isAfter(startDate, MAX_DATE)) {
                     errors.push('start_date is not within the range');
                 }
             } else {
@@ -30,9 +25,9 @@ const ValidationService = {
         if(!end_date) {
             errors.push('end_date not present');
         } else {
-            if(end_date.match(dateRegex)) {
+            if(end_date.match(DATE_PATTERN)) {
                 endDate = new Date(end_date);
-                if(isBefore(endDate, minDate) || isAfter(endDate, maxDate)) {
+                if(isBefore(endDate, MIN_DATE) || isAfter(endDate, MAX_DATE)) {
                     errors.push('end_date is not within the range');
                 } 
             } else {
@@ -55,7 +50,7 @@ const ValidationService = {
         if(!weekly_rent) {
             errors.push('weekly_rent not present');
         } else {
-            if (weekly_rent < 0 || weekly_rent > 999999999) {
+            if (weekly_rent < MIN_RENT || weekly_rent > MAX_RENT) {
                 errors.push('weekly_rent is not within the range');
             }
         }
