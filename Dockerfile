@@ -9,4 +9,6 @@ ADD . /app
 # Set final working directory
 WORKDIR /app
 
+RUN npm install
+
 CMD ["npm", "run", "start"]
